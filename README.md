@@ -6,7 +6,7 @@
 https://i-love-forms-wtf.herokuapp.com/users/new
 
 ## Auteurs
-### Team Caen
+### #Team Caen
 
 * Maxime Beaufils, Bertrand Pelletier, Iliès El Ouartassi
 ### En savoir plus
