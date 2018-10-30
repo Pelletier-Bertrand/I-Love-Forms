@@ -1,0 +1,52 @@
+<h2>Forme HTML</h2>
+  <form>
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Username">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Email">
+    </div>
+        <div class="col">
+      <input type="text" class="form-control" placeholder="Biography">
+      <div class="col">
+  <input type="submit" class="btn btn-primary">
+   </div>
+    </div>
+  </div>
+  </form>
+
+
+ <h1>Form-tag</h1>
+ <%= form_tag url_for(action: 'create'), method: "post" do %>
+
+      <%= label_tag 'username' %>
+      <%= text_field_tag 'username', @users.username %>
+      <br /> <br />
+
+      <%= label_tag 'email' %>
+      <%= text_area_tag 'email', @users.email %>
+      <br /> <br />
+
+      <%= label_tag 'bio' %>
+      <%= text_field_tag 'bio', @users.bio %>
+      <br /> <br />
+
+      <%= submit_tag "Create user" %>
+
+    <% end %>
+
+
+
+<h2 class="text-center"><u>Utiliser le Form for pour créer un nouveau profil</u></h2> <br>
+<%= form_for @users, url: {action: "create"} do |f| %>
+<div class="container" >
+  Username: <%= f.text_field :username, class: "form-control" %>
+  Email : <%= f.text_field :email, class: "form-control" %>
+  Biography : <%= f.text_area :bio, class: "form-control" %>
+  <%= f.submit "Create user"%>
+    </div>
+</div>
+<% end %>
+
+
